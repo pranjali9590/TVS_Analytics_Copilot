@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TVS | Residual Value & Risk Analytics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero-header">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="brand-row">
+
+                <div class="brand-mark">
+                    TVS
+                </div>
+
+                <div class="brand-divider"></div>
+
+                <div>
+                    <div class="brand-subtitle">
+                        FINANCIAL ANALYTICS
+                    </div>
+
+                    <div class="brand-title">
+                        Residual Value & Risk Intelligence
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-text">
+
+                <span class="eyebrow">
+                    AI-ASSISTED LENDING ANALYTICS
+                </span>
+
+                <h1>
+                    Residual Value &
+                    <span>Risk Analytics</span>
+                </h1>
+
+                <p>
+                    Data-driven residual value prediction, asset risk
+                    assessment and lending recommendation engine.
+                </p>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>ML</strong>
+                    <span>Prediction Engine</span>
+                </div>
+
+                <div>
+                    <strong>360°</strong>
+                    <span>Risk Analytics</span>
+                </div>
+
+                <div>
+                    <strong>36M</strong>
+                    <span>Forecast Horizon</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Decorative pictorial illustration: stylised two-wheeler + rising
+             analytics curve, built as inline SVG so it stays crisp and
+             on-brand without any external image dependency. -->
+        <div class="hero-illustration" aria-hidden="true">
+            <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="heroGlow" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#45e58a" stop-opacity="0.9"/>
+                        <stop offset="100%" stop-color="#0b5260" stop-opacity="0.2"/>
+                    </linearGradient>
+                </defs>
+
+                <circle class="hi-ring hi-ring-1" cx="230" cy="230" r="205" fill="none" stroke="url(#heroGlow)" stroke-width="1.5" stroke-dasharray="6 10"/>
+                <circle class="hi-ring hi-ring-2" cx="230" cy="230" r="160" fill="none" stroke="#45e58a" stroke-opacity="0.25" stroke-width="1"/>
+
+                <!-- rising analytics curve -->
+                <polyline class="hi-curve" points="70,300 140,260 190,285 250,190 300,215 360,110"
+                          fill="none" stroke="#45e58a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <g class="hi-dot" style="animation-delay:.1s"><circle cx="70" cy="300" r="6" fill="#45e58a"/></g>
+                <g class="hi-dot" style="animation-delay:.3s"><circle cx="190" cy="285" r="6" fill="#ffffff"/></g>
+                <g class="hi-dot" style="animation-delay:.5s"><circle cx="300" cy="215" r="6" fill="#45e58a"/></g>
+                <g class="hi-dot" style="animation-delay:.7s"><circle cx="360" cy="110" r="8" fill="#ffffff"/></g>
+
+                <!-- stylised scooter silhouette -->
+                <g class="hi-scooter" fill="none" stroke="#e8f8ef" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="140" cy="345" r="30" stroke-width="7"/>
+                    <circle cx="330" cy="345" r="30" stroke-width="7"/>
+                    <path d="M140 345 L200 345 L235 290 L270 290" />
+                    <path d="M235 290 L245 250 L285 250" />
+                    <path d="M270 290 L330 345" />
+                    <path d="M200 345 L215 300 L255 300" />
+                    <circle cx="245" cy="235" r="10" fill="#45e58a" stroke="none"/>
+                </g>
+            </svg>
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="top-nav">
+
+        <div class="nav-inner">
+
+            <div class="nav-logo">
+                TVS <span>Risk Intelligence</span>
+            </div>
+
+            <div class="api-status">
+
+                <span class="status-dot"></span>
+
+                Prediction API Connected
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard-container">
+
+
+        <!-- ================= PAGE INTRO ================= -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <span class="section-kicker">
+                    AGREEMENT ANALYSIS
+                </span>
+
+                <h2>
+                    Enter Agreement & Asset Details
+                </h2>
+
+                <p>
+                    Enter the agreement, customer and asset information.
+                    The analytics engine will calculate residual value,
+                    risk and recommended lending terms.
+                </p>
+
+            </div>
+
+            <div class="model-badge">
+
+                <span class="pulse"></span>
+
+                MODEL ACTIVE
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INPUT CARD ================= -->
+
+        <section class="input-card">
+
+            <!-- CUSTOMER -->
+
+            <div class="form-section">
+
+                <div class="form-section-header">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Customer Profile
+                        </h3>
+
+                        <p>
+                            Customer credit and financial information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Customer Age</label>
+
+                        <input
+                            type="number"
+                            id="Cust_Age"
+                            placeholder="e.g. 30"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>CIBIL Score</label>
+
+                        <input
+                            type="number"
+                            id="Cust_Cibil_Score"
+                            placeholder="e.g. 722"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Customer Net Salary</label>
+
+                        <div class="input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="Cust_Net_Salary"
+                                placeholder="e.g. 21000"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Customer Net IRR</label>
+
+                        <div class="input-suffix">
+
+                            <input
+                                type="number"
+                                step="0.01"
+                                id="Cust_Net_IRR"
+                                placeholder="e.g. 29.43"
+                            >
+
+                            <span>%</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Employment Type</label>
+
+                        <select id="Cust_Employment_Type">
+
+                            <option value="">Select employment</option>
+
+                            <option value="AGR">
+                                AGR
+                            </option>
+
+                            <option value="SAL">
+                                SAL
+                            </option>
+
+                            <option value="SE">
+                                SE
+                            </option>
+
+                            <option value="OTH">
+                                OTH
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Gender</label>
+
+                        <select id="Cust_Gender">
+
+                            <option value="">Select gender</option>
+
+                            <option value="M">M</option>
+
+                            <option value="F">F</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Coborrower Flag</label>
+
+                        <select id="Coborrower_Flag">
+
+                            <option value="">Select</option>
+
+                            <option value="Y">Y</option>
+
+                            <option value="N">N</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Application Risk</label>
+
+                        <select id="App_Score_Risk">
+
+                            <option value="">Select risk</option>
+
+                            <option value="LOW RISK">
+                                LOW RISK
+                            </option>
+
+                            <option value="MEDIUM RISK">
+                                MEDIUM RISK
+                            </option>
+
+                            <option value="HIGH RISK">
+                                HIGH RISK
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOAN -->
+
+            <div class="form-section">
+
+                <div class="form-section-header">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Loan & Lending Information
+                        </h3>
+
+                        <p>
+                            Agreement-level lending parameters
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Tenure</label>
+
+                        <div class="input-suffix">
+
+                            <input
+                                type="number"
+                                id="Tenure"
+                                placeholder="e.g. 29"
+                            >
+
+                            <span>Months</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Asset Cost At Disbursal</label>
+
+                        <div class="input-prefix">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="Asset_Cost_At_Disbursal"
+                                placeholder="e.g. 82899"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Loan Amount</label>
+
+                        <div class="input-prefix">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="Loan_Amount"
+                                placeholder="e.g. 75733"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>LTV</label>
+
+                        <input
+                            type="number"
+                            step="0.000001"
+                            id="LTV"
+                            placeholder="e.g. 0.913557"
+                        >
+
+                        <small>
+                            Enter decimal value used by model
+                        </small>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Outstanding Balance At Liquidation</label>
+
+                        <div class="input-prefix">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="OS_Balance_At_Liquidation"
+                                placeholder="e.g. 41322"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Traffic Challan Amount</label>
+
+                        <div class="input-prefix">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="Traiffic_Challan_Amount"
+                                value="0"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ASSET -->
+
+            <div class="form-section">
+
+                <div class="form-section-header">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Asset Profile
+                        </h3>
+
+                        <p>
+                            Vehicle, condition and seizure information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Asset Model</label>
+
+                        <input
+                            type="text"
+                            id="Asset_Model"
+                            placeholder="e.g. MOPEDS"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Fuel Type</label>
+
+                        <select id="Asset_Fuel_Type">
+
+                            <option value="">Select fuel type</option>
+
+                            <option value="Petrol">
+                                Petrol
+                            </option>
+
+                            <option value="EV">
+                                EV
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Asset Cost Age At Seizure</label>
+
+                        <div class="input-suffix">
+
+                            <input
+                                type="number"
+                                step="0.1"
+                                id="Asset_Age_Months_At_Seizure"
+                                placeholder="e.g. 22.3"
+                            >
+
+                            <span>Months</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Months Spent In Yard</label>
+
+                        <input
+                            type="number"
+                            step="0.01"
+                            id="Months_Spent_In_Yard"
+                            placeholder="e.g. 1.73"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Seizure Date Year</label>
+
+                        <input
+                            type="number"
+                            id="Seizure_Date_Year"
+                            placeholder="e.g. 2025"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Asset Accident Flag</label>
+
+                        <select id="Asset_Accident_Flag">
+
+                            <option value="">Select</option>
+
+                            <option value="No">
+                                No
+                            </option>
+
+                            <option value="Yes">
+                                Yes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Asset Discount Flag</label>
+
+                        <select id="Asset_Disc_Flag">
+
+                            <option value="">Select</option>
+
+                            <option value="0">0</option>
+
+                            <option value="1">1</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Asset Alloy Flag</label>
+
+                        <select id="Asset_Alloy_Flag">
+
+                            <option value="">Select</option>
+
+                            <option value="0">0</option>
+
+                            <option value="1">1</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONDITION -->
+
+            <div class="form-section">
+
+                <div class="form-section-header">
+
+                    <div class="section-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Vehicle Condition
+                        </h3>
+
+                        <p>
+                            Physical condition used to calculate asset health
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="condition-grid">
+
+                    <div class="condition-box">
+
+                        <label>
+                            Body Condition
+                        </label>
+
+                        <select id="Asset_Bodycondition">
+
+                            <option value="">Select condition</option>
+
+                            <option value="G">G — Good</option>
+
+                            <option value="A">A — Average</option>
+
+                            <option value="P">P — Poor</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="condition-box">
+
+                        <label>
+                            Tyre Condition
+                        </label>
+
+                        <select id="Asset_Tyrecondition">
+
+                            <option value="">Select condition</option>
+
+                            <option value="G">G — Good</option>
+
+                            <option value="A">A — Average</option>
+
+                            <option value="P">P — Poor</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="condition-box">
+
+                        <label>
+                            General Condition
+                        </label>
+
+                        <select id="Asset_Generalcondition">
+
+                            <option value="">Select condition</option>
+
+                            <option value="G">G — Good</option>
+
+                            <option value="A">A — Average</option>
+
+                            <option value="P">P — Poor</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="condition-box">
+
+                        <label>
+                            Engine Condition
+                        </label>
+
+                        <select id="Asset_Enginecondition">
+
+                            <option value="">Select condition</option>
+
+                            <option value="G">G — Good</option>
+
+                            <option value="A">A — Average</option>
+
+                            <option value="P">P — Poor</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOCUMENTATION -->
+
+            <div class="form-section">
+
+                <div class="form-section-header">
+
+                    <div class="section-number">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Documentation & Geography
+                        </h3>
+
+                        <p>
+                            Registration, RC and location information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Customer Region</label>
+
+                        <input
+                            type="text"
+                            id="Cust_Region"
+                            placeholder="e.g. TN II"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Pincode Tier</label>
+
+                        <input
+                            type="text"
+                            id="Pincode_Tier"
+                            placeholder="e.g. 07 Rural"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>RC Availability</label>
+
+                        <select id="RC_Availability">
+
+                            <option value="">Select</option>
+
+                            <option value="Y">Y</option>
+
+                            <option value="N">N</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Registration Flag</label>
+
+                        <select id="Registration_Flag">
+
+                            <option value="">Select</option>
+
+                            <option value="REG">
+                                REG
+                            </option>
+
+                            <option value="NREG">
+                                NREG
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREDICT -->
+
+            <div class="predict-area">
+
+                <div class="predict-info">
+
+                    <div class="predict-icon">
+                        AI
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ready to analyse
+                        </strong>
+
+                        <p>
+                            Your inputs will be processed by the
+                            trained residual-value model.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="predict-button"
+                    onclick="predictValue()"
+                >
+
+                    <span>
+                        Run Risk & Residual Analysis
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section
+            id="results"
+            class="results-section"
+        >
+
+            <div class="results-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        MODEL OUTPUT
+                    </span>
+
+                    <h2>
+                        Prediction & Decision Dashboard
+                    </h2>
+
+                </div>
+
+                <div class="result-status">
+
+                    <span></span>
+
+                    LIVE MODEL RESULT
+
+                </div>
+
+            </div>
+
+
+            <!-- MAIN KPIs -->
+
+            <div class="main-results-grid reveal">
+
+                <div class="primary-result-card value-card">
+
+                    <div class="card-label">
+                        PREDICTED SOLD AMOUNT
+                    </div>
+
+                    <div
+                        id="predicted_sold_amount"
+                        class="big-value"
+                    >
+                        ₹0
+                    </div>
+
+                    <div class="card-foot">
+                        Estimated liquidation value
+                    </div>
+
+                </div>
+
+
+                <div class="primary-result-card risk-card">
+
+                    <div class="card-label">
+                        RESIDUAL RISK SCORE
+                    </div>
+
+                    <div
+                        id="residual_risk_score"
+                        class="big-value"
+                    >
+                        0
+                    </div>
+
+                    <div class="risk-meter">
+
+                        <div
+                            id="risk_meter_fill"
+                            class="risk-meter-fill"
+                        ></div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        0–100 risk scale
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="primary-result-card band-card"
+                    id="risk_band_card"
+                >
+
+                    <div class="card-label">
+                        RISK BAND
+                    </div>
+
+                    <div
+                        id="risk_band"
+                        class="risk-band"
+                    >
+                        -
+                    </div>
+
+                    <div class="card-foot">
+                        Portfolio decision category
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISUAL RISK INSIGHTS (gauge + portfolio benchmark) -->
+
+            <div class="output-section reveal">
+
+                <div class="output-title">
+
+                    <div class="output-icon">
+                        V
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Visual Risk Insights
+                        </h3>
+
+                        <p>
+                            This agreement's risk, shown against the wider liquidated portfolio
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="visual-grid">
+
+                    <div class="visual-chart-card">
+                        <span class="visual-chart-label">Residual Risk Gauge</span>
+                        <div class="gauge-chart-wrap">
+                            <canvas id="riskGaugeChart"></canvas>
+                            <div class="gauge-center-label">
+                                <strong id="gauge_score_label">0</strong>
+                                <span>/ 100</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual-chart-card">
+                        <span class="visual-chart-label">Portfolio Risk Band Distribution</span>
+                        <div class="pie-chart-wrap">
+                            <canvas id="portfolioDistributionChart"></canvas>
+                        </div>
+                        <p class="visual-chart-footnote">
+                            Illustrative distribution across the 15,000-agreement
+                            liquidated training portfolio.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ASSET ANALYTICS -->
+
+            <div class="output-section reveal">
+
+                <div class="output-title">
+
+                    <div class="output-icon">
+                        A
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Asset Analytics
+                        </h3>
+
+                        <p>
+                            Asset quality, market and recovery indicators
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-grid">
+
+                    <div class="metric-card">
+
+                        <span>
+                            Asset Health Index
+                        </span>
+
+                        <strong id="asset_health_index">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Market Volatility
+                        </span>
+
+                        <strong id="market_volatility_score">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Segment Risk Index
+                        </span>
+
+                        <strong id="segment_risk_index">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <span>
+                            Recovery Efficiency
+                        </span>
+
+                        <strong id="recovery_efficiency">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric-card profit-card">
+
+                        <span>
+                            Estimated Profitability
+                        </span>
+
+                        <strong id="profitability">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LENDING -->
+
+            <div class="output-section reveal">
+
+                <div class="output-title">
+
+                    <div class="output-icon">
+                        L
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Lending Recommendation
+                        </h3>
+
+                        <p>
+                            Current policy compared with model recommendation
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-table">
+
+                    <div class="comparison-header">
+
+                        <span>
+                            Metric
+                        </span>
+
+                        <span>
+                            Current Policy
+                        </span>
+
+                        <span>
+                            Recommended
+                        </span>
+
+                        <span>
+                            Change
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            LTV
+                        </span>
+
+                        <strong id="current_ltv">
+                            0%
+                        </strong>
+
+                        <strong
+                            class="recommended-value"
+                            id="recommended_ltv"
+                        >
+                            0%
+                        </strong>
+
+                        <span id="ltv_change">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            Pricing / IRR
+                        </span>
+
+                        <strong id="current_pricing">
+                            0%
+                        </strong>
+
+                        <strong
+                            class="recommended-value"
+                            id="recommended_pricing"
+                        >
+                            0%
+                        </strong>
+
+                        <span id="pricing_change">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            Tenure
+                        </span>
+
+                        <strong id="current_tenure">
+                            0 months
+                        </strong>
+
+                        <strong
+                            class="recommended-value"
+                            id="recommended_tenure"
+                        >
+                            0 months
+                        </strong>
+
+                        <span id="tenure_change">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORECAST -->
+
+            <div class="output-section reveal">
+
+                <div class="output-title">
+
+                    <div class="output-icon">
+                        F
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Residual Value Forecast
+                        </h3>
+
+                        <p>
+                            Projected asset value over the next 36 months
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="forecast-layout">
+
+                    <div class="forecast-chart">
+
+                        <canvas id="forecastChart"></canvas>
+
+                    </div>
+
+
+                    <div class="forecast-cards">
+
+                        <div class="forecast-card">
+
+                            <span>
+                                Current
+                            </span>
+
+                            <strong id="current_predicted_value">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="forecast-card">
+
+                            <span>
+                                12 Months
+                            </span>
+
+                            <strong id="forecast_12_month">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="forecast-card">
+
+                            <span>
+                                24 Months
+                            </span>
+
+                            <strong id="forecast_24_month">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="forecast-card">
+
+                            <span>
+                                36 Months
+                            </span>
+
+                            <strong id="forecast_36_month">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCENARIO SIMULATOR -->
+
+            <div class="output-section reveal">
+
+                <div class="output-title">
+
+                    <div class="output-icon">
+                        S
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Scenario Simulator — Market Disruption
+                        </h3>
+
+                        <p>
+                            Stress-test this asset's residual value against EV adoption,
+                            inflation and fuel-price shocks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="scenario-layout">
+
+                    <div class="scenario-controls">
+
+                        <div class="scenario-slider-group">
+
+                            <div class="scenario-slider-label">
+                                <span>EV Adoption Stress</span>
+                                <strong id="ev_stress_value">6%</strong>
+                            </div>
+
+                            <input
+                                type="range"
+                                id="ev_stress_slider"
+                                min="0"
+                                max="15"
+                                step="1"
+                                value="6"
+                                class="scenario-slider ev-slider"
+                            >
+
+                            <small>
+                                Extra petrol-resale softening as EV share of the
+                                market rises
+                            </small>
+
+                        </div>
+
+
+                        <div class="scenario-slider-group">
+
+                            <div class="scenario-slider-label">
+                                <span>Inflation Stress</span>
+                                <strong id="inflation_stress_value">5%</strong>
+                            </div>
+
+                            <input
+                                type="range"
+                                id="inflation_stress_slider"
+                                min="0"
+                                max="10"
+                                step="1"
+                                value="5"
+                                class="scenario-slider inflation-slider"
+                            >
+
+                            <small>
+                                Replacement-cost inflation lifting nominal
+                                used-asset prices
+                            </small>
+
+                        </div>
+
+
+                        <div class="scenario-slider-group">
+
+                            <div class="scenario-slider-label">
+                                <span>Fuel Price Stress</span>
+                                <strong id="fuel_stress_value">7%</strong>
+                            </div>
+
+                            <input
+                                type="range"
+                                id="fuel_stress_slider"
+                                min="0"
+                                max="12"
+                                step="1"
+                                value="7"
+                                class="scenario-slider fuel-slider"
+                            >
+
+                            <small>
+                                Rising fuel prices soften petrol resale,
+                                lift EV resale
+                            </small>
+
+                        </div>
+
+
+                        <button
+                            class="scenario-run-button"
+                            onclick="runScenarioSimulation()"
+                        >
+                            <span>Run Scenario Simulation</span>
+                            <span class="button-arrow">→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="scenario-chart-wrap">
+                        <canvas id="scenarioChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="scenario-summary-grid" id="scenario_summary_grid">
+
+                    <div class="scenario-summary-card base">
+                        <span>Base Case</span>
+                        <strong id="scenario_base_erosion">0%</strong>
+                        <em>erosion by 36M</em>
+                    </div>
+
+                    <div class="scenario-summary-card ev">
+                        <span>High EV Adoption</span>
+                        <strong id="scenario_ev_erosion">0%</strong>
+                        <em>erosion by 36M</em>
+                    </div>
+
+                    <div class="scenario-summary-card inflation">
+                        <span>High Inflation</span>
+                        <strong id="scenario_inflation_erosion">0%</strong>
+                        <em>erosion by 36M</em>
+                    </div>
+
+                    <div class="scenario-summary-card fuel">
+                        <span>Fuel Price Shock</span>
+                        <strong id="scenario_fuel_erosion">0%</strong>
+                        <em>erosion by 36M</em>
+                    </div>
+
+                    <div class="scenario-summary-card custom">
+                        <span>Custom Stress</span>
+                        <strong id="scenario_custom_erosion">0%</strong>
+                        <em>erosion by 36M</em>
+                    </div>
+
+                </div>
+
+                <p class="scenario-hint" id="scenario_hint">
+                    Run a residual analysis above first, then run the scenario
+                    simulation to stress-test this specific asset.
+                </p>
+
+            </div>
+
+
+            <!-- BUSINESS DECISION -->
+
+            <div
+                class="decision-card reveal"
+                id="decision_card"
+            >
+
+                <div class="decision-left">
+
+                    <div class="decision-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <span class="decision-label">
+                            BUSINESS DECISION
+                        </span>
+
+                        <h3 id="overall_risk">
+                            Overall Risk: —
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="decision-action">
+
+                    <span>
+                        RECOMMENDED ACTION
+                    </span>
+
+                    <p id="recommended_action">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            TVS Residual Value & Risk Intelligence
+        </div>
+
+        <div>
+            AI-assisted lending analytics • Internal decision support
+        </div>
+
+    </footer>
+
+
+    <!-- ================= AI LENDING COPILOT ================= -->
+
+    <div id="copilot-launcher" onclick="toggleCopilot()">
+        <span id="copilot-launcher-icon">💬</span>
+        <span id="copilot-launcher-label">AI Lending Copilot</span>
+    </div>
+
+    <div id="copilot-panel" class="copilot-hidden">
+
+        <div id="copilot-header">
+            <div id="copilot-header-text">
+                <div id="copilot-title">AI Lending Copilot</div>
+                <div id="copilot-subtitle">Grounded in this dashboard's live predictions</div>
+            </div>
+            <button id="copilot-close" onclick="toggleCopilot()">&times;</button>
+        </div>
+
+        <div id="copilot-messages"></div>
+
+        <div id="copilot-chips"></div>
+
+        <form id="copilot-input-row" onsubmit="return handleCopilotSubmit(event)">
+            <input
+                type="text"
+                id="copilot-input"
+                placeholder="Ask about risk, LTV, the model..."
+                autocomplete="off"
+            />
+            <button type="submit" id="copilot-send">Send</button>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
