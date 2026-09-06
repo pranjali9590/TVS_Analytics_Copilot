@@ -1,4 +1,4 @@
-import os
+'''import os
 from typing import Optional, Dict, Any
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,6 +9,20 @@ import joblib
 import pandas as pd
 import numpy as np
 
+import copilot'''
+import os
+import sys
+from typing import Optional, Dict, Any
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from pydantic import BaseModel
+import joblib
+import pandas as pd
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import copilot
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
